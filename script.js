@@ -8,7 +8,7 @@ const chatbox = document.querySelector(".chatbox");
 
 let userMessage;
 const API_KEY =
-    "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";
+    "";
 
 //OpenAI Free APIKey
 
