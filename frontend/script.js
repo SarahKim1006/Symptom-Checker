@@ -7,8 +7,7 @@ const sendChatBtn =
 const chatbox = document.querySelector(".chatbox");
 
 let userMessage;
-const API_KEY =
-    "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";
+
 
 //OpenAI Free APIKey
 
@@ -22,44 +21,24 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (incomingChatLi) => {
-    const API_URL = "https://api.openai.com/v1/chat/completions";
-    const messageElement = incomingChatLi
-    .querySelector("p");
-    const requestOptions = {
+    fetch("https://your-backend.onrender.com/chat", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            "model": "gpt-4o-mini",
-            "messages": [
-                {
-                    role: "user",
-                    content: userMessage + "respond in format of name of illness, descriptions, and solutions" + "Question should be related to medical field and if not, then respond that you can only answer medical side of concerns"
-                }
-            ]
+            message: userMessage + " respond in format of name of illness, descriptions, and solutions. Question should be related to medical field and if not, then respond that you can only answer medical side of concerns."
         })
-    };
-
-    fetch(API_URL, requestOptions)
-        .then(res => {
-            if (!res.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return res.json();
-        })
-        .then(data => {
-            messageElement
-            .innerHTML = parseMarkdown(data.choices[0].message.content);
-        })
-        .catch((error) => {
-            messageElement
-            .classList.add("error");
-            messageElement
-            .textContent = "Oops! Something went wrong. Please try again!";
-        })
-        .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+    })
+    .then(res => res.json())
+    .then(data => {
+        messageElement.innerHTML = parseMarkdown(data.reply);
+    })
+    .catch((error) => {
+        messageElement.classList.add("error");
+        messageElement.textContent = "Oops! Something went wrong. Please try again!";
+    })
+    .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
 
 
