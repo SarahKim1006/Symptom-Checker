@@ -21,7 +21,7 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (incomingChatLi) => {
-    fetch("https://your-backend.onrender.com/chat", {
+    fetch("https://symptom-checker-47ts.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
