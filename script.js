@@ -47,7 +47,7 @@ const handleChat = () => {
     if (!userMessage) {
         return;
     }
-    chatInput.value = "";4
+    chatInput.value = "";
     chatbox
     .appendChild(createChatLi(userMessage, "chat-outgoing"));
     chatbox
