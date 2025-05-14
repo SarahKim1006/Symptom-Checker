@@ -16,12 +16,12 @@ app.post('/chat', async (req, res) => {
   const { message } = req.body;
 
   try {
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: message }]
     });
 
-    res.json({ reply: response.data.choices[0].message.content });
+    res.json({ reply: response.choices[0].message.content });
   } catch (err) {
     console.error(err.response?.data || err.message);
     res.status(500).send("Error calling OpenAI");
