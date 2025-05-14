@@ -20,7 +20,7 @@ const createChatLi = (message, className) => {
     return chatLi;
 }
 const generateResponse = (incomingChatLi) => {
-    //const messageElement = incomingChatLi.querySelector("p");
+    const messageElement = incomingChatLi.querySelector("p");
     fetch("https://symptom-checker-47ts.onrender.com/chat", {
         method: "POST",
         headers: {
