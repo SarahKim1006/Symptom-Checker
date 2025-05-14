@@ -19,9 +19,9 @@ const createChatLi = (message, className) => {
     chatLi.innerHTML = chatContent;
     return chatLi;
 }
-const messageElement = incomingChatLi.querySelector("p");
 const generateResponse = (incomingChatLi) => {
-    fetch("https://symptom-checker-47ts.onrender.com/api/ask", {
+    const messageElement = incomingChatLi.querySelector("p");
+    fetch("https://symptom-checker-47ts.onrender.com/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
