@@ -73,10 +73,10 @@ header h2 {
 }
 
 .chat-input textarea {
-  width: 1280px;
+  width: 1333px;
   height: 75px;
   /*width: 100%;*/
-  /*padding: 10px;*/
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 7px;
   resize: none;
