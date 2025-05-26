@@ -16,7 +16,8 @@ body {
 }
 
 .chatBot {
-  border: 3px solid #004fc1;
+  /*border: 3px solid #004fc1;*/
+  border: 3px solid #2C2C2C
   border-radius: 10px;
   margin: 50px auto;
   margin-left: 10%;
@@ -28,7 +29,8 @@ body {
 }
 
 header {
-  background-color: #004fc1;
+  /*background-color: #004fc1;*/
+  background-color: #121212
   text-align: center;
   padding: 10px;
   border-radius: 7px 7px 0 0;
