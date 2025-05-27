@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #f7f7f7;
+  background-color: #008000;
 }
 
 .chatBot {
@@ -82,7 +82,7 @@ header h2 {
   resize: none;
   outline: none;
   overflow-y: scroll;
-  background-color: #dcdcdc85;
+  background-color: #F0FFF4;
   font-size: 16px;
   color: black;
   font-weight: 600;
