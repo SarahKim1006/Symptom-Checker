@@ -27,7 +27,7 @@ const generateResponse = (incomingChatLi) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            message: userMessage + " respond in format of name of illness, descriptions, and treatments. Question should be related to medical field and if not, then respond that you can only answer medical side of concerns."
+            message: userMessage + " \n respond in format of name of illness, descriptions, and treatments. Question should be related to medical field and if not, then respond that you can only answer medical side of concerns. Do not mention that there is a format to your answer when the users did not type any medical issues."
         })
     })
     .then(res => res.json())
