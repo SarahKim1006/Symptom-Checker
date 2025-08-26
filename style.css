@@ -15,6 +15,51 @@ body {
   background-color: #ffffff;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+.topnav a{
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navContainer {
+  text-align: center;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+#nav li {
+  display: inline;
+  margin-left: 10px;
+}
+
+#nave li a{
+  display: block;
+  padding: 8px;
+  background-color: #d7d7d7;
+}
+
+#home {
+  font-size: 30px
+}
+
+.article {
+  float: left;
+  width: 33.3%;
+  padding: 12px;
+}
+
 .chatBot {
   border: 3px solid #d7d7d7;
   border-radius: 10px;
