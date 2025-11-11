@@ -133,7 +133,7 @@ header h2 {
   font-weight: 600;
   margin-top: -10px;
   margin-left: -15px;
-  scrollbar-width: auto
+  scrollbar-width: auto;
   box-sizing: unset;
   /*height: 70%;*/
 }
